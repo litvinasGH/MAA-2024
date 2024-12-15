@@ -1,0 +1,81 @@
+﻿Сборка начата 15.12.2024 18:30:40.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Обращение к "Debug\Lab18.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt FST.cpp In.cpp Log.cpp LT.cpp MFST.cpp Out.cpp Parm.cpp PolishNotation.cpp SE_Lab14.cpp
+         FST.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(81,23): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(106,21): warning C4018: <: несоответствие типов со знаком и без знака
+         In.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\In.cpp(86,11): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_THROW_IN"
+         Log.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+         LT.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+         MFST.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\MFST.cpp(253,76): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
+         Out.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+         Parm.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Parm.cpp(9,11): warning C4101: wst: неиспользованная локальная переменная
+         PolishNotation.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+         SE_Lab14.cpp
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\Lab18.exe" /INCREMENTAL /ILK:"Debug\Lab18.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\Lab18.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\Lab18.lib" /MACHINE:X86 Debug\Error.obj
+         Debug\FST.obj
+         Debug\GRB.obj
+         Debug\In.obj
+         Debug\IT.obj
+         Debug\Log.obj
+         Debug\LT.obj
+         Debug\MFST.obj
+         Debug\Out.obj
+         Debug\Parm.obj
+         Debug\PolishNotation.obj
+         Debug\SE_Lab14.obj
+         Lab18.vcxproj -> C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\Lab18.exe
+       FinalizeBuildStatus:
+         Файл "Debug\Lab18.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Lab18.tlog\Lab18.lastbuildstate".
+     1>Сборка проекта "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(81,23): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(106,21): warning C4018: <: несоответствие типов со знаком и без знака
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\In.cpp(86,11): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_THROW_IN"
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\MFST.cpp(253,76): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Parm.cpp(9,11): warning C4101: wst: неиспользованная локальная переменная
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+
+    Предупреждений: 14
+    Ошибок: 0
+
+Прошло времени 00:00:05.57

@@ -1,0 +1,5 @@
+Исходные данные
+Строка: connect kazanlib|function uint fi(bool a, uint b)|{|b= b+1;|b = 1;|write (b);|b = b + 10;|cycle(10)|{|b = b+1;|};|return x;|};|
+Количество символов : 127
+Количество строк    : 14
+Проигнорировано     : 0

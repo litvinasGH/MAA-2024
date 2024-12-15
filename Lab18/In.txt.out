@@ -1,0 +1,5 @@
+Исходные данные
+Строка: connect ctime|function uint fi(bool a, uint b)|{|uint kazan;|return x;|};||main|{|uint x;|x = x >> 1;|x = x << 2;|cycle(3)|{|uint kazan;|};|return x;|};||
+Количество символов : 154
+Количество строк    : 20
+Проигнорировано     : 0

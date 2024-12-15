@@ -1,0 +1,13 @@
+connect kazanlib
+function uint fi(bool a, uint b)
+{
+b= b+1;
+b = 1;
+write (b);
+b = b + 10;
+cycle(10)
+{
+b = b+1;
+};
+return x;
+};
