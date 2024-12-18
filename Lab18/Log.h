@@ -25,5 +25,5 @@ namespace Log
 	void WriteIn(LOG log, In::IN in);
 	void WriteError(LOG log, Error::ERROR error);
 	void Close(LOG log);
-	void WriteLex(LOG log, LT::LexTable &lextable, IT::IdTable &idtable);
+	void WriteLex(LOG log, LT::LexTable lextable, IT::IdTable idtable);
 };

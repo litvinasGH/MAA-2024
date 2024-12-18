@@ -1,19 +1,18 @@
-connect ctime
-function uint fi(bool a, uint b)
+function uint fi(uint x, uint y)
 {
-uint kazan;
+x >> 2;
 return x;
 };
 
 main
 {
-uint x;
-x = x >> 1;
-x = x << 2;
-cycle(3)
-{
-uint kazan;
-};
-return x;
-};
+uint kaz = 2;
+kaz = 3;
+x = 3;
+2 << 1;
 
+bool flag;
+flag = true;
+
+return 0;
+};

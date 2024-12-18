@@ -94,104 +94,186 @@ namespace Log
 
 
 
-    void WriteLex(LOG log, LT::LexTable &lextable, IT::IdTable &idtable)
-    {
-        int str = 0;
-        int size = [](int number) -> int
-            {
-                if (number == 0) return 1;
+	void WriteLex(LOG log, LT::LexTable lextable, IT::IdTable idtable) {
+		int str = 0;
+		int size = [](int number) -> int {
+			if (number == 0) return 1;
 
-                int count = 0;
-                while (number != 0) {
-                    number /= 10;
-                    count++;
-                }
-                return count;
-            }(LT::GetEntry(lextable, lextable.size - 1).sn);
-            (*log.stream) << "\n—--- Представление кода в виде лексем —--- " << endl;
-            for (int i = 0; i < lextable.size; i++) {
-                if (lextable.table[i].sn + 1 != str) {
-                    *log.stream << endl;
-                    cout << endl;
-                    str = lextable.table[i].sn + 1;
-                    *log.stream << std::setfill('0') << std::setw(size) << str-1 << ' ';
-                    cout << std::setfill('0') << std::setw(size) << str -1<< ' ';
-                }
-                if (lextable.table[i].lexema == 'i' || lextable.table[i].lexema == 'n' || lextable.table[i].lexema == 'l')
-                {
-                    *log.stream << lextable.table[i].lexema << '|' << lextable.table[i].idxTI + 1 << '|';
-                    cout << lextable.table[i].lexema << '|' << lextable.table[i].idxTI + 1 << '|';
-                }
-                else {
-                    *log.stream << lextable.table[i].lexema;
-                    cout << lextable.table[i].lexema;
-                }
-            }
-            cout << endl << endl;
-            size = [](int number) -> int {
-                if (number == 0) return 1;
+			int count = 0;
+			while (number != 0) {
+				number /= 10;
+				count++;
+			}
+			return count;
+			}(LT::GetEntry(lextable, lextable.size - 1).sn);
+			(*log.stream) << "\n--—- Представления кода в виде лексем ——-- " << endl;
+			for (int i = 0; i < lextable.size; i++) {
+				if (lextable.table[i].sn + 1 != str) {
+					*log.stream << endl;
+					cout << endl;
+					str = lextable.table[i].sn + 1;
+					*log.stream << std::setfill('0') << std::setw(size) << str << ' ';
+					cout << std::setfill('0') << std::setw(size) << str << ' ';
+				}
+				switch (lextable.table[i].lexema)
+				{
+				case 'i':
+					*log.stream << lextable.table[i].lexema << '|' << lextable.table[i].idxTI + 1 << '|';
+					cout << lextable.table[i].lexema << "\033[93m|\033[0m" << lextable.table[i].idxTI + 1 << "\033[93m|\033[0m";
+					break;
+				case '$':
+					*log.stream << lextable.table[i].lexema;
+					cout << "\033[31m" << lextable.table[i].lexema << "\033[0m";
+					break;
+				default:
+					*log.stream << lextable.table[i].lexema;
+					cout << lextable.table[i].lexema;
+					break;
+				}
+			}
+			int maxl = 7;
+			string st;
+			
+			(*log.stream) << "\n--—------------------------------------------- Идентификаторы ---------------------------------------——-----------------" << endl;
+			cout << "\n---------------------------------------------------------------------------------------------------------------------------------" << endl;
+			cout << "|  Номер  |    id    | Тип данных |     Тип     | Связь (Номер Лексема Строка) |" << right << std::setfill(' ') <<
+				setw(maxl) << "Видимость" << "  | Значение ? " << endl;
+			cout << "-----------------------------------------------------------------------------------------------------------------------------------" << endl;
+			(*log.stream) << "|  Номер  |    id    | Тип данных |     Тип     | Связь (Номер Лексема Строка) |" << right << std::setfill(' ') <<
+				setw(maxl) << "Видимость" << "  | Значение ? " << endl;
+			(*log.stream) << "-------------------------------------------------------------------------------------------------------------------------" << endl;
 
-                int count = 0;
-                while (number != 0) {
-                    number /= 10;
-                    count++;
-                }
-                return count;
-                }(idtable.size);
-                (*log.stream) << "\n—--- Идентификаторы —--- " << endl;
-                cout << "Номер\tid\tТип данных\tТип\tСвязь с лексемой\t\t\tЗначение?" << endl;
-                (*log.stream) << "Номер\tid\tТип данных\tТип\tСвязь с лексемой\t\t\tЗначение?" << endl;
-                for (int i = 0; i < idtable.size; i++) {
-                    *log.stream << std::setfill('0') << std::setw(size) << i + 1 << ' ';
-                    cout << std::setfill('0') << std::setw(size) << i + 1 << ' ';
-                    cout << idtable.table[i].id << " ";
-                    *log.stream << idtable.table[i].id << " ";
-                    switch (idtable.table[i].iddatatype) {
-                    case IT::INT:
-                        cout << "int ";
-                        *log.stream << "int ";
-                        break;
-                    case IT::STR:
-                        cout << "str ";
-                        *log.stream << "str ";
-                        break;
-                    }
-                    switch (idtable.table[i].idtype) {
-                    case IT::F:
-                        cout << "func ";
-                        *log.stream << "func ";
-                        break;
-                    case IT::L:
-                        cout << "lit ";
-                        *log.stream << "lit ";
-                        break;
-                    case IT::P:
-                        cout << "param ";
-                        *log.stream << "param ";
-                        break;
-                    case IT::V:
-                        cout << "variable ";
-                        *log.stream << "variable ";
-                        break;
-                    case IT::LE:
-                        cout << "lexem ";
-                        *log.stream << "lexem ";
-                        break;
-                    }
-                    LT::Entry en = LT::GetEntry(lextable, idtable.table[i].idxfirstLE);
-                    cout << idtable.table[i].idxfirstLE << " " << en.lexema << " " << en.sn << " ";
-                    *log.stream << idtable.table[i].idxfirstLE << " " << en.lexema << " " << en.sn << " ";
-                    if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::INT) {
-                        cout << idtable.table[i].vint << " ";
-                        *log.stream << idtable.table[i].vint << " ";
-                    }
-                    else if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::STR) {
-                        cout << idtable.table[i].vstr.len << " \"" << idtable.table[i].vstr.str << "\" ";
-                        *log.stream << idtable.table[i].vstr.len << " \"" << idtable.table[i].vstr.str << "\" ";
-                    }
-                    cout << endl;
-                    *log.stream << endl;
-                }
-    }
+			for (int i = 0; i < idtable.size; i++) {
+				cout << "| " << std::setw(7) << i + 1 << " | ";
+				(*log.stream) << "| " << std::setw(7) << i + 1 << " | ";
+
+				cout << std::setfill(' ') << std::setw(8) << idtable.table[i].id << " | ";
+				(*log.stream) << std::setfill(' ') << std::setw(8) << idtable.table[i].id << " | ";
+
+				switch (idtable.table[i].iddatatype) {
+				case IT::INT:
+					cout << std::setw(10) << "int" << " | ";
+					(*log.stream) << std::setw(10) << "int" << " | ";
+					break;
+				case IT::STR:
+					cout << std::setw(10) << "str" << " | ";
+					(*log.stream) << std::setw(10) << "str" << " | ";
+					break;
+				case IT::BOOL:
+					cout << std::setw(10) << "bool" << " | ";
+					(*log.stream) << std::setw(10) << "bool" << " | ";
+					break;
+				}
+
+				switch (idtable.table[i].idtype) {
+				case IT::F:
+					cout << std::setw(11) << "функция" << " | ";
+					(*log.stream) << std::setw(11) << "функция" << " | ";
+					break;
+				case IT::L:
+					cout << std::setw(11) << "литерал" << " | ";
+					(*log.stream) << std::setw(11) << "литерал" << " | ";
+					break;
+				case IT::P:
+					cout << std::setw(11) << "параметр" << " | ";
+					(*log.stream) << std::setw(11) << "параметр" << " | ";
+					break;
+				case IT::V:
+					cout << std::setw(11) << "переменная" << " | ";
+					(*log.stream) << std::setw(11) << "переменная" << " | ";
+					break;
+				
+				}
+
+				LT::Entry en = LT::GetEntry(lextable, idtable.table[i].idxfirstLE);
+				cout << std::setw(9) << idtable.table[i].idxfirstLE + 1 << std::setw(9) << en.lexema << std::setw(9) << en.sn << "  | ";
+				(*log.stream) << std::setw(9) << idtable.table[i].idxfirstLE + 1 << std::setw(9) << en.lexema << std::setw(9) << en.sn + 1 << "  | ";
+
+				
+				
+				// Вывод значения
+				if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::INT) {
+					cout << idtable.table[i].vint << " ";
+					(*log.stream) << idtable.table[i].vint << " ";
+				}
+				else if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::STR) {
+					cout << idtable.table[i].vstr.len << " " << idtable.table[i].vstr.str << " ";
+					(*log.stream) << idtable.table[i].vstr.len << " " << idtable.table[i].vstr.str << " ";
+				}
+				else if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::BOOL) {
+					cout << idtable.table[i].vbool << " ";
+					(*log.stream) << idtable.table[i].vbool << " ";
+				}
+
+				cout << endl;
+				(*log.stream) << endl;
+			}
+			cout << "---------------------------------------------------------------------------------------------------------" << endl;
+			(*log.stream) << "---------------------------------------------------------------------------------------------------------" << endl;
+			/*(*log.stream) << "\n--—------------------------------------------- Идентификаторы ---------------------------------------——-- " << endl;
+			cout << "\n---------------------------------------------------------------------------------------------------------" << endl;
+			cout << "|  Номер  |    id    | Тип данных |    Тип    | Связь (Номер Лексема Строка) | Значение?" << endl;
+			cout << "---------------------------------------------------------------------------------------------------------" << endl;
+			(*log.stream) << "|  Номер  |    id    | Тип данных |    Тип    | Связь (Номер Лексема Строка) | Значение?" << endl;
+			(*log.stream) << "---------------------------------------------------------------------------------------------------------" << endl;
+
+			for (int i = 0; i < idtable.size; i++) {
+				cout << "| " << std::setfill('0') << std::setw(7) << i + 1 << " | ";
+				(*log.stream) << "| " << std::setfill('0') << std::setw(7) << i + 1 << " | ";
+
+				cout << std::setfill(' ') <<std::setw(8) << idtable.table[i].id << " | ";
+				(*log.stream) << std::setfill(' ') << std::setw(8) << idtable.table[i].id << " | ";
+
+				switch (idtable.table[i].iddatatype) {
+				case IT::INT:
+					cout << std::setw(10) << "int" << " | ";
+					(*log.stream) << std::setw(10) << "int" << " | ";
+					break;
+				case IT::STR:
+					cout << std::setw(10) << "str" << " | ";
+					(*log.stream) << std::setw(10) << "str" << " | ";
+					break;
+				}
+
+				switch (idtable.table[i].idtype) {
+				case IT::F:
+					cout << std::setw(9) << "func" << " | ";
+					(*log.stream) << std::setw(9) << "func" << " | ";
+					break;
+				case IT::L:
+					cout << std::setw(9) << "lit" << " | ";
+					(*log.stream) << std::setw(9) << "lit" << " | ";
+					break;
+				case IT::P:
+					cout << std::setw(9) << "param" << " | ";
+					(*log.stream) << std::setw(9) << "param" << " | ";
+					break;
+				case IT::V:
+					cout << std::setw(9) << "variable" << " | ";
+					(*log.stream) << std::setw(9) << "variable" << " | ";
+					break;
+				}
+
+				LT::Entry en = LT::GetEntry(lextable, idtable.table[i].idxfirstLE);
+				cout << std::setw(9) <<idtable.table[i].idxfirstLE + 1 << std::setw(9) << en.lexema << std::setw(9) << en.sn << "  | ";
+				(*log.stream) << std::setw(9) << idtable.table[i].idxfirstLE + 1 << std::setw(9) << en.lexema << std::setw(9) << en.sn + 1 << "  | ";
+
+				if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::INT) {
+					cout << idtable.table[i].value.vint << " ";
+					(*log.stream) << idtable.table[i].value.vint << " ";
+				}
+				else if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::STR) {
+					cout << idtable.table[i].value.vstr.len << " " << idtable.table[i].value.vstr.str << " ";
+					(*log.stream) << idtable.table[i].value.vstr.len << " " << idtable.table[i].value.vstr.str << " ";
+				}
+				cout << endl;
+				(*log.stream) << endl;
+			}
+			cout << "---------------------------------------------------------------------------------------------------------" << endl;
+			(*log.stream) << "---------------------------------------------------------------------------------------------------------" << endl;*/
+
+
+
+	}
 }
 

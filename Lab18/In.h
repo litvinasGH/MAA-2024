@@ -7,7 +7,7 @@ using namespace std;
 #define IN_MAX_LEN_TEXT 1024*1024
 #define IN_CODE_ENDL '\n'
 #define IN_CODE_TABLE {\
-	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T,   '|', IN::T, IN::T, IN::T, IN::T, IN::T, \
+	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, \
 	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, \
 	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, \
 	IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, IN::T, \
@@ -42,4 +42,5 @@ namespace In
 		int line = 0;
 	};
 	IN getin(wchar_t infile[]);
+	void Delete(IN& in);
 };

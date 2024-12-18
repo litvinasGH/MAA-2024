@@ -1,13 +1,14 @@
-connect kazanlib
-function uint fi(bool a, uint b)
+function uint fi(uint x, uint y)
 {
-b= b+1;
-b = 1;
-write (b);
-b = b + 10;
-cycle(10)
-{
-b = b+1;
-};
+x >> 2;
 return x;
+};
+
+main
+{
+uint kazan = 2;
+kazan = 3;
+x = 3;
+
+return 0;
 };

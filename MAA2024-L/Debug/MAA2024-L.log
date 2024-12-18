@@ -1,0 +1,21 @@
+﻿Сборка начата 16.12.2024 15:21:46.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\MAA2024-L\MAA2024-L.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Создание "Debug\MAA2024-L.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\MAA2024-L.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\MAA2024-L.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Source.cpp
+         Source.cpp
+       Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\Lib.exe /OUT:"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\MAA2024-L.lib" /NOLOGO /MACHINE:X86 Debug\Source.obj
+         MAA2024-L.vcxproj -> C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\MAA2024-L.lib
+       FinalizeBuildStatus:
+         Файл "Debug\MAA2024-L.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\MAA2024-L.tlog\MAA2024-L.lastbuildstate".
+     1>Сборка проекта "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\MAA2024-L\MAA2024-L.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:01.77

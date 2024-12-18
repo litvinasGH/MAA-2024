@@ -1,12 +1,13 @@
 ﻿#include "stdafx.h"
 #include <iostream>
 #include <time.h>
-
+#include "LEX.h"
 #include <iomanip>
 #include "Error.h"
 #include "Parm.h"
 #include "Log.h"
 #include "In.h"
+#include "GEN.h"
 
 using namespace std;
 
@@ -34,21 +35,30 @@ int _tmain(int argc, _TCHAR* argv[])
 
         Log::WriteIn(log, in);
         Out::WriteIn(out, in);
-        Out::Close(out);
         LT::LexTable lextable = LT::Create(LT_MAXSIZE);
         IT::IdTable idtable = IT::CreateT(TI_MAXSIZE);
-        
         FST::CheckL(in, lextable, idtable);
-        
+ 
         Log::WriteLex(log, lextable, idtable);
-
+        LT::LexTable newlex = LT::Create(LT_MAXSIZE);
+        IT::IdTable newtable = IT::CreateT(TI_MAXSIZE);
+        for (int i = 0; i < lextable.size; i++)
+        {
+            newlex.table[i] = lextable.table[i];
+        }
+        newlex.size = lextable.size;
+        newtable.size = idtable.size;
+        for (int i = 0; i < idtable.size; i++)
+        {
+            newtable.table[i] = idtable.table[i];
+        }
         MFST::Mfst mfst(lextable, GRB::getGreibach());
         mfst.start(log);
         mfst.savededucation();
         mfst.printrules(log);
-
-       
-
+        Gen::Generator Generate(newlex, idtable, parm.out);
+        In::Delete(in);
+        Out::Close(out);
     }
     catch (Error::ERROR e)
     {
@@ -68,7 +78,7 @@ int _tmain(int argc, _TCHAR* argv[])
         }
         if (log.stream != NULL)
             Log::WriteError(log, e);
-        exit(e.id);
+        system("pause");
     }
     Log::Close(log);
     system("pause");

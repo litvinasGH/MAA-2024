@@ -10,6 +10,9 @@ using namespace Out;
 
 namespace In
 {
+	void Delete(IN& in) {
+		delete in.text;
+	}
 	IN getin(wchar_t infile[])
 	{
 		bool squat = false;

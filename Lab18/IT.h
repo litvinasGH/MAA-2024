@@ -9,11 +9,11 @@
 namespace IT
 {										    
 	enum IDDATATYPE { INT = 1, STR = 2 , BOOL = 3};  // Типы данных: INT (целое число) и STR (строка)
-	enum IDTYPE { V = 1, F = 2, P = 3, L = 4, I = 5, LE = 6};  // Типы идентификаторов: V (переменная), F (функция), P (параметр), L (локальная переменная) , название идентиффикатора (Лексема)
+	enum IDTYPE { V = 1, F = 2, P = 3, L = 4, I = 5};  // Типы идентификаторов: V (переменная), F (функция), P (параметр), L (локальная переменная) , название идентиффикатора (Лексема)
 
 	struct Entry
 	{
-		char* value;
+
 		int			idxfirstLE;
 		char* id;
 		IDDATATYPE	iddatatype;
@@ -24,7 +24,7 @@ namespace IT
 				int len;
 				char* str;
 			}	vstr;
-			
+			bool vbool;
 
 	};
 

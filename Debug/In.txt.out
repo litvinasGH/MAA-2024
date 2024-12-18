@@ -1,5 +1,55 @@
-Исходные данные
-Строка: connect kazanlib|function uint fi(bool a, uint b)|{|b= b+1;|b = 1;|write (b);|b = b + 10;|cycle(10)|{|b = b+1;|};|return x;|};|
-Количество символов : 127
-Количество строк    : 14
-Проигнорировано     : 0
+.586
+.model flat, stdcall
+includelib libucrt.lib
+includelib kernel32.lib
+includelib ../Debug/MAA2024-L.lib
+ExitProcess PROTO :DWORD
+
+EXTRN ruslang: proc
+EXTRN writeInt: proc
+EXTRN showInt: proc
+EXTRN today: proc
+EXTRN showtime: proc
+
+.stack 4096
+
+.const
+	NewVar2 BYTE 2
+	NewVar2 BYTE 2
+	NewVar3 BYTE 3
+	NewVar3 BYTE 3
+	NewVar0 BYTE 0
+
+.data
+	buffer BYTE 256 dup(0)
+	kazan BYTE 0
+
+.code
+
+fi PROC , x : BYTE
+	pop ebx 
+	pop eax 
+	mov cl, bl
+	shr eax, cl
+	push eax
+	push 2
+	jmp local0
+	push 	jmp local0
+local0:
+	pop eax
+	ret
+fi ENDP
+
+main PROC
+	pop fi
+	push 		jmp theend
+	pop fi
+	push 		jmp theend
+	pop fi
+	push 		jmp theend
+	push 0
+		jmp theend
+theend:
+	call ExitProcess
+main ENDP
+end main

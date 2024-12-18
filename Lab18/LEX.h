@@ -9,12 +9,12 @@ namespace LEX
 {
 	struct LEX
 	{
-		IT::IdTable  idtable;
+		IT::IdTable  idTable;
 		LT::LexTable lextable;
 
 		LEX(
 			LT::LexTable _lextable, IT::IdTable  _idtable) {
-			idtable = _idtable;
+			idTable = _idtable;
 			lextable = _lextable;
 		}
 		LEX() {}

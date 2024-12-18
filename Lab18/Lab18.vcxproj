@@ -24,6 +24,7 @@
     <ProjectGuid>{7727a64e-6771-4afa-a850-256632e67769}</ProjectGuid>
     <RootNamespace>Lab18</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MAA2024</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -135,6 +136,7 @@
   <ItemGroup>
     <ClCompile Include="Error.cpp" />
     <ClCompile Include="FST.cpp" />
+    <ClCompile Include="GEN.cpp" />
     <ClCompile Include="GRB.cpp" />
     <ClCompile Include="In.cpp" />
     <ClCompile Include="IT.cpp" />
@@ -143,12 +145,12 @@
     <ClCompile Include="MFST.cpp" />
     <ClCompile Include="Out.cpp" />
     <ClCompile Include="Parm.cpp" />
-    <ClCompile Include="PolishNotation.cpp" />
     <ClCompile Include="SE_Lab14.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
     <ClInclude Include="FST.h" />
+    <ClInclude Include="GEN.h" />
     <ClInclude Include="GRB.h" />
     <ClInclude Include="In.h" />
     <ClInclude Include="IT.h" />
@@ -158,7 +160,6 @@
     <ClInclude Include="MFST.h" />
     <ClInclude Include="Out.h" />
     <ClInclude Include="Parm.h" />
-    <ClInclude Include="PolishNotation.h" />
     <ClInclude Include="Rule.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
