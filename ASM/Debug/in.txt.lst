@@ -1,0 +1,221 @@
+Microsoft (R) Macro Assembler Version 14.42.34435.0	    12/21/24 02:22:44
+..\Debug\in.txt.asm					     Page 1 - 1
+
+
+				.586P
+				.model flat, stdcall
+				includelib libucrt.lib
+				includelib kernel32.lib
+				includelib MAA2024-L.lib
+				ExitProcess PROTO :DWORD
+
+				EXTRN showtime: proc
+				EXTRN ruslang: proc
+				EXTRN today: proc
+				EXTRN showInt: proc
+
+				.stack 4096
+
+ 00000000			.const
+ 00000000 02				L0 BYTE 2
+ 00000001 03				L1 BYTE 3
+ 00000002 01				L2 BYTE 1
+ 00000003 02				L3 BYTE 2
+ 00000004 03				L4 BYTE 3
+ 00000005 02				L5 BYTE 2
+ 00000006 01				L6 BYTE 1
+ 00000007 01				L7 BYTE 1
+ 00000008 03				L8 BYTE 3
+ 00000009 03				L9 BYTE 3
+ 0000000A 01				L10 BYTE 1
+ 0000000B 00				L11 BYTE 0
+
+ 00000000			.data
+ 00000000  00000100 [			buffer BYTE 256 dup(0)
+	    00
+	   ]
+ 00000100 00000000			buffecx DWORD ?
+ 00000104 00				kazm BYTE 0
+ 00000105 00				flagm BYTE 0
+ 00000106 00				xm BYTE 0
+
+ 00000000			.code
+
+ 00000000			fi PROC x : BYTE, y : BYTE
+ 00000003  A0 00000000 R		mov al, L0
+ 00000008  66| 50			push ax
+ 0000000A  A0 00000000 R		mov al, L0
+ 0000000F  66| 50			push ax
+ 00000011  5B				pop ebx 
+ 00000012  58				pop eax 
+ 00000013  8A CB			mov cl, bl
+ 00000015  D3 E0			shl eax, cl
+ 00000017  50				push eax
+ 00000018  66| 58			pop ax
+ 0000001A  A2 00000000 R		mov L0, al
+..\Debug\in.txt.asm(49) : warning A4000:cannot modify READONLY segment
+					mov al, func
+..\Debug\in.txt.asm(50) : error A2070:invalid instruction operands
+ 0000001F  66| 50			push ax
+ 00000021  EB 0B			jmp local0
+ 0000002E			local0:
+ 0000002E  58				pop eax
+					ret
+ 00000033			fi ENDP
+..\Debug\in.txt.asm(56) : warning A6004:procedure argument or local not referenced : x
+
+ 00000033			func PROC x : BYTE, ko : BYTE
+ 00000036  A0 00000001 R		mov al, L1
+ 0000003B  66| 50			push ax
+ 0000003D  A0 00000001 R		mov al, L1
+ 00000042  66| 50			push ax
+ 00000044  5B				pop ebx 
+ 00000045  58				pop eax 
+ 00000046  8A CB			mov cl, bl
+ 00000048  D3 E8			shr eax, cl
+ 0000004A  50				push eax
+ 0000004B  66| 58			pop ax
+ 0000004D  A2 00000001 R		mov L1, al
+..\Debug\in.txt.asm(69) : warning A4000:cannot modify READONLY segment
+ 00000052  A0 00000002 R		mov al, L2
+ 00000057  66| 50			push ax
+ 00000059  EB 00			jmp local1
+ 0000005B			local1:
+ 0000005B  58				pop eax
+					ret
+ 00000060			func ENDP
+..\Debug\in.txt.asm(76) : warning A6004:procedure argument or local not referenced : x
+
+ 00000060			main PROC
+ 00000060  E8 00000000 E		call ruslang
+ 00000065  66| 58			pop ax
+ 00000067  A2 00000104 R		mov kazm, al
+ 0000006C  66| 58			pop ax
+ 0000006E  A2 00000004 R		mov L4, al
+..\Debug\in.txt.asm(83) : warning A4000:cannot modify READONLY segment
+ 00000073  A0 00000005 R		mov al, L5
+ 00000078  66| 50			push ax
+ 0000007A  A0 00000006 R		mov al, L6
+ 0000007F  66| 50			push ax
+ 00000081  5B				pop ebx 
+ 00000082  58				pop eax 
+ 00000083  8A CB			mov cl, bl
+ 00000085  D3 E8			shr eax, cl
+ 00000087  50				push eax
+ 00000088  66| 58			pop ax
+ 0000008A  A2 00000005 R		mov L5, al
+..\Debug\in.txt.asm(94) : warning A4000:cannot modify READONLY segment
+ 0000008F  66| 58			pop ax
+ 00000091  A2 00000007 R		mov L7, al
+..\Debug\in.txt.asm(96) : warning A4000:cannot modify READONLY segment
+ 00000096  66| 58			pop ax
+ 00000098  A2 00000106 R		mov xm, al
+ 0000009D  B0 03			mov al, 3
+ 0000009F  66| 50			push ax
+ 000000A1  66| 58			pop ax
+					mov 3, al
+..\Debug\in.txt.asm(102) : error A2001:immediate operand not allowed
+ 000000A3  E8 00000000 E		call today
+ 000000A8  50				push eax
+ 000000A9  B0 02			mov al, 2
+ 000000AB  66| 50			push ax
+ 000000AD  E8 00000000 E		call showInt
+ 000000B2  50				push eax
+ 000000B3  BB 00000002			mov ebx, 2
+ 000000B8			cycle0:
+ 000000B8  89 0D 00000100 R		mov buffecx, ecx
+ 000000BE  A0 00000009 R		mov al, L9
+ 000000C3  66| 50			push ax
+ 000000C5  A0 0000000A R		mov al, L10
+ 000000CA  66| 50			push ax
+ 000000CC  5B				pop ebx 
+ 000000CD  58				pop eax 
+ 000000CE  8A CB			mov cl, bl
+ 000000D0  D3 E0			shl eax, cl
+ 000000D2  50				push eax
+ 000000D3  66| 58			pop ax
+ 000000D5  A2 00000009 R		mov L9, al
+..\Debug\in.txt.asm(122) : warning A4000:cannot modify READONLY segment
+..\Debug\in.txt.asm(122) : warning A6004:procedure argument or local not referenced : y
+..\Debug\in.txt.asm(122) : warning A6004:procedure argument or local not referenced : ko
+ 000000DA  8B 0D 00000100 R		mov ecx, buffecx
+ 000000E0  E2 D6		loop cycle0
+ 000000E2  A0 0000000B R		mov al, L11
+ 000000E7  66| 50			push ax
+ 000000E9  EB 00				jmp theend
+ 000000EB			theend:
+ 000000EB  E8 00000000 E	call ExitProcess
+ 000000F0			main ENDP
+				end main
+Microsoft (R) Macro Assembler Version 14.42.34435.0	    12/21/24 02:22:44
+..\Debug\in.txt.asm					     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+CONST  . . . . . . . . . . . . .	32 Bit	 0000000C Para	  Public  'CONST'	 ReadOnly
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000107 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 000000F0 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+fi . . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000033 Public STDCALL
+  x  . . . . . . . . . . . . . .	Byte	 bp + 00000008
+  y  . . . . . . . . . . . . . .	Byte	 bp + 0000000C
+  local0 . . . . . . . . . . . .	L Near	 0000002E _TEXT	
+func . . . . . . . . . . . . . .	P Near	 00000033 _TEXT	Length= 0000002D Public STDCALL
+  x  . . . . . . . . . . . . . .	Byte	 bp + 00000008
+  ko . . . . . . . . . . . . . .	Byte	 bp + 0000000C
+  local1 . . . . . . . . . . . .	L Near	 0000005B _TEXT	
+main . . . . . . . . . . . . . .	P Near	 00000060 _TEXT	Length= 00000090 Public STDCALL
+  cycle0 . . . . . . . . . . . .	L Near	 000000B8 _TEXT	
+  theend . . . . . . . . . . . .	L Near	 000000EB _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+L0 . . . . . . . . . . . . . . .	Byte	 00000000 CONST	
+L10  . . . . . . . . . . . . . .	Byte	 0000000A CONST	
+L11  . . . . . . . . . . . . . .	Byte	 0000000B CONST	
+L1 . . . . . . . . . . . . . . .	Byte	 00000001 CONST	
+L2 . . . . . . . . . . . . . . .	Byte	 00000002 CONST	
+L3 . . . . . . . . . . . . . . .	Byte	 00000003 CONST	
+L4 . . . . . . . . . . . . . . .	Byte	 00000004 CONST	
+L5 . . . . . . . . . . . . . . .	Byte	 00000005 CONST	
+L6 . . . . . . . . . . . . . . .	Byte	 00000006 CONST	
+L7 . . . . . . . . . . . . . . .	Byte	 00000007 CONST	
+L8 . . . . . . . . . . . . . . .	Byte	 00000008 CONST	
+L9 . . . . . . . . . . . . . . .	Byte	 00000009 CONST	
+buffecx  . . . . . . . . . . . .	DWord	 00000100 _DATA	
+buffer . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+flagm  . . . . . . . . . . . . .	Byte	 00000105 _DATA	
+kazm . . . . . . . . . . . . . .	Byte	 00000104 _DATA	
+ruslang  . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+showInt  . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+showtime . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+today  . . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+xm . . . . . . . . . . . . . . .	Byte	 00000106 _DATA	
+
+	   10 Warnings
+	   2 Errors

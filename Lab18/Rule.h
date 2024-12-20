@@ -17,7 +17,7 @@ namespace GRB
 		),
 
 		Rule(NS('N'), GRB_ERROR_SERIES + 1,					// Синтаксическая ошибка. Ошибочный оператор"
-			26,
+			28,
 			Rule::Chain(3, TS('t'), TS('i'), TS(';')),
 			Rule::Chain(5, TS('w'), TS('('), TS('i'), TS(')'), TS(';')),
 			Rule::Chain(3, TS('w'), NS('W'), TS(';')),
@@ -28,6 +28,8 @@ namespace GRB
 			Rule::Chain(8, TS('f'), TS('t'), TS('i'), TS('('), NS('F'), TS(')'), TS(';'), NS('N')),
 			Rule::Chain(4, TS('L'), TS('('), TS(')'), TS(';')),
 			Rule::Chain(5, TS('L'), TS('('), TS(')'), TS(';'), NS('N')),
+			Rule::Chain(5, TS('L'), TS('('), NS('T'), TS(')'), TS(';')),
+			Rule::Chain(6, TS('L'), TS('('), NS('T'), TS(')'), TS(';'), NS('N')),
 			Rule::Chain(4, TS('t'), TS('i'), TS(';'), NS('N')),
 			Rule::Chain(6, TS('w'), TS('('), TS('i'), TS(')'), TS(';'), NS('N')),
 			Rule::Chain(5, TS('w'), TS('('), TS('i'), TS(')'), TS(';')),

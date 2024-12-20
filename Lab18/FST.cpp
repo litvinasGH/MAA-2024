@@ -907,7 +907,9 @@ namespace FST
 					if (strcmp(table.table[j].id, "today") == false)
 						continue;
 					
-					if ((tempEntry.idtype == IT::V || tempEntry.idtype == IT::P || tempEntry.idtype == IT::F) && (strcmp(tempEntry.id, table.table[j].id) == false) &&  typeD == false 
+					if ((tempEntry.idtype == IT::V || tempEntry.idtype == IT::P || tempEntry.idtype == IT::F) 
+						&& (strcmp(tempEntry.id, table.table[j].id) == false) 
+						&&  typeD == false 
 						&& (strcmp(tempEntry.view.top(), table.table[j].view.top()) == false || table.table[j].view.size()==1))
 					{
 						absence = true;
