@@ -1,1 +1,30 @@
+function uint fi(uint x, uint y)
+{
+x >> 2;
+return x;
+};
 
+function bool func(uint x, uint ko)
+{
+x << 3;
+return true;
+};
+
+
+main
+{
+uint kaz = 0x2;
+kaz = 0b11;
+2 << 1;
+bool flag;
+flag = true;
+uint x = 3;
+x = fi(3,4);
+today();
+cycle(2)
+{
+writeInt();
+3 >> 1;
+};
+return 0;
+};

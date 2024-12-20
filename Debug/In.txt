@@ -4,11 +4,27 @@ x >> 2;
 return x;
 };
 
+function bool func(uint x, uint ko)
+{
+x << 3;
+return true;
+};
+
+
 main
 {
-uint kazan = 2;
-kazan = 3;
-x = 3;
-
+uint kaz = 0x2;
+kaz = 0b11;
+2 << 1;
+bool flag;
+flag = true;
+uint x = 3;
+x = fi(3,4);
+today();
+showInt(x);
+cycle(2)
+{
+3 >> 1;
+};
 return 0;
 };

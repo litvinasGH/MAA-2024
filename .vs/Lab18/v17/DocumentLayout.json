@@ -1,0 +1,564 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\MAA-2024\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GEN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\GEN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\FST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\FST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F46C163-3113-4AE7-9CA8-2111C3425426}|ASM\\ASM.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Debug\\in.txt.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5F46C163-3113-4AE7-9CA8-2111C3425426}|ASM\\ASM.vcxproj|solutionrelative:Debug\\in.txt.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\SE_Lab14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\SE_Lab14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED9170D-D92A-4B38-B551-8D375A619BE2}|MAA2024-L\\MAA2024-L.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\MAA2024-L\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FED9170D-D92A-4B38-B551-8D375A619BE2}|MAA2024-L\\MAA2024-L.vcxproj|solutionrelative:MAA2024-L\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (2).h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (4).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\FST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\FST.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GEN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\GEN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Parm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Parm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Rule.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Rule.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Parm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Parm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\IT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\IT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\BuildCustomizations\\masm.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Error.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\LT.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Polish.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Polish.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (2).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GRB.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\GRB.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\LT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (3).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\MFST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\IT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\IT.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Log.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Log.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LEX.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\LEX.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Log.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Polish.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Polish.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\Polish.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Out.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7727A64E-6771-4AFA-A850-256632E67769}|Lab18\\Lab18.vcxproj|solutionrelative:Lab18\\Out.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\GEN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\artur\\Downloads\\Telegram Desktop\\Polish.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "in.txt.asm",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Debug\\in.txt.asm",
+              "RelativeDocumentMoniker": "Debug\\in.txt.asm",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Debug\\in.txt.asm",
+              "RelativeToolTip": "Debug\\in.txt.asm",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwCAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-20T21:49:23.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GEN.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GEN.cpp",
+              "RelativeDocumentMoniker": "Lab18\\GEN.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GEN.cpp",
+              "RelativeToolTip": "Lab18\\GEN.cpp",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAqwP4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\MAA2024-L\\Source.cpp",
+              "RelativeDocumentMoniker": "MAA2024-L\\Source.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\MAA2024-L\\Source.cpp",
+              "RelativeToolTip": "MAA2024-L\\Source.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Parm.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Parm.h",
+              "RelativeDocumentMoniker": "Lab18\\Parm.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Parm.h",
+              "RelativeToolTip": "Lab18\\Parm.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:45:29.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Generation (4).cpp",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (4).cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (4).cpp",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (4).cpp",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (4).cpp",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T03:07:58.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Generation.h",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation.h",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation.h",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation.h",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T20:15:40.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GEN.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GEN.h",
+              "RelativeDocumentMoniker": "Lab18\\GEN.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GEN.h",
+              "RelativeToolTip": "Lab18\\GEN.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SE_Lab14.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\SE_Lab14.cpp",
+              "RelativeDocumentMoniker": "Lab18\\SE_Lab14.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\SE_Lab14.cpp",
+              "RelativeToolTip": "Lab18\\SE_Lab14.cpp",
+              "ViewState": "AgIAADEAAAAAAAAAAAAqwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IT.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\IT.h",
+              "RelativeDocumentMoniker": "Lab18\\IT.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\IT.h",
+              "RelativeToolTip": "Lab18\\IT.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Error.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Error.cpp",
+              "RelativeDocumentMoniker": "Lab18\\Error.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Error.cpp",
+              "RelativeToolTip": "Lab18\\Error.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwDUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IT.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\IT.cpp",
+              "RelativeDocumentMoniker": "Lab18\\IT.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\IT.cpp",
+              "RelativeToolTip": "Lab18\\IT.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LEX.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LEX.h",
+              "RelativeDocumentMoniker": "Lab18\\LEX.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LEX.h",
+              "RelativeToolTip": "Lab18\\LEX.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Generation (2).h",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (2).h",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (2).h",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (2).h",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (2).h",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-18T18:35:47.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FST.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\FST.cpp",
+              "RelativeDocumentMoniker": "Lab18\\FST.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\FST.cpp",
+              "RelativeToolTip": "Lab18\\FST.cpp",
+              "ViewState": "AgIAAGUDAAAAAAAAAAAawGkDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LT.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LT.h",
+              "RelativeDocumentMoniker": "Lab18\\LT.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LT.h",
+              "RelativeToolTip": "Lab18\\LT.h",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAswCEAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Rule.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Rule.h",
+              "RelativeDocumentMoniker": "Lab18\\Rule.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Rule.h",
+              "RelativeToolTip": "Lab18\\Rule.h",
+              "ViewState": "AgIAABAAAAAAAAAAAAAawB4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Polish.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Polish.cpp",
+              "RelativeDocumentMoniker": "Lab18\\Polish.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Polish.cpp",
+              "RelativeToolTip": "Lab18\\Polish.cpp",
+              "ViewState": "AQIAADYAAAAAAAAAAAAWwEgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FST.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\FST.h",
+              "RelativeDocumentMoniker": "Lab18\\FST.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\FST.h",
+              "RelativeToolTip": "Lab18\\FST.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Microsoft.CppCommon.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets",
+              "ViewState": "AQIAAFwEAAAAAAAAAAAYwG0EAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-12-18T20:07:56.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LT.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LT.cpp",
+              "RelativeDocumentMoniker": "Lab18\\LT.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\LT.cpp",
+              "RelativeToolTip": "Lab18\\LT.cpp",
+              "ViewState": "AQIAABEAAAAAAAAAAAAswBUAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GEN.h",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\GEN.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\GEN.h",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\GEN.h",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\GEN.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-18T16:12:52.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Log.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Log.cpp",
+              "RelativeDocumentMoniker": "Lab18\\Log.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Log.cpp",
+              "RelativeToolTip": "Lab18\\Log.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\stdafx.h",
+              "RelativeDocumentMoniker": "Lab18\\stdafx.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\stdafx.h",
+              "RelativeToolTip": "Lab18\\stdafx.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Generation (2).cpp",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (2).cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (2).cpp",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (2).cpp",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (2).cpp",
+              "ViewState": "AQIAAG0BAAAAAAAAAAAmwJ4BAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-18T15:43:58.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GRB.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GRB.h",
+              "RelativeDocumentMoniker": "Lab18\\GRB.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\GRB.h",
+              "RelativeToolTip": "Lab18\\GRB.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MFST.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\MFST.cpp",
+              "RelativeDocumentMoniker": "Lab18\\MFST.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\MFST.cpp",
+              "RelativeToolTip": "Lab18\\MFST.cpp",
+              "ViewState": "AQIAAMwAAAAAAAAAAAASwOUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Generation (3).cpp",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (3).cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (3).cpp",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Generation (3).cpp",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Generation (3).cpp",
+              "ViewState": "AQIAABgBAAAAAAAAAAAswCIBAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T01:02:09.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "masm.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\BuildCustomizations\\masm.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\BuildCustomizations\\masm.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\BuildCustomizations\\masm.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\BuildCustomizations\\masm.targets",
+              "ViewState": "AgIAADYAAAAAAAAAAAAgwEUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-12-19T12:37:44.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Parm.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Parm.cpp",
+              "RelativeDocumentMoniker": "Lab18\\Parm.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Parm.cpp",
+              "RelativeToolTip": "Lab18\\Parm.cpp",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Log.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Log.h",
+              "RelativeDocumentMoniker": "Lab18\\Log.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Log.h",
+              "RelativeToolTip": "Lab18\\Log.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Polish.cpp",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Polish.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Polish.cpp",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Polish.cpp",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Polish.cpp",
+              "ViewState": "AQIAADkAAAAAAAAAAAAiwFsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-18T20:39:15.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Polish.h",
+              "DocumentMoniker": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Polish.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Polish.h",
+              "ToolTip": "C:\\Users\\artur\\Downloads\\Telegram Desktop\\Polish.h",
+              "RelativeToolTip": "..\\..\\..\\artur\\Downloads\\Telegram Desktop\\Polish.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-18T22:00:32.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Polish.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Polish.h",
+              "RelativeDocumentMoniker": "Lab18\\Polish.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Polish.h",
+              "RelativeToolTip": "Lab18\\Polish.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-20T21:20:35.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Out.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Out.cpp",
+              "RelativeDocumentMoniker": "Lab18\\Out.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\MAA-2024\\Lab18\\Out.cpp",
+              "RelativeToolTip": "Lab18\\Out.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-20T21:20:35.784Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

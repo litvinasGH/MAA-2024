@@ -1,55 +1,68 @@
+Исходные данные
+Строка: function uint fi(uint x, uint y)|{|x >> 2;|return x;|};||main|{|uint kazan = 2;|kazan = 3;|x = 3;||return 0;|};|
+Количество символов : 112
+Количество строк    : 15
+Проигнорировано     : 0
+;========================= шапка ==============================
 .586
-.model flat, stdcall
-includelib libucrt.lib
-includelib kernel32.lib
-includelib ../Debug/MAA2024-L.lib
-ExitProcess PROTO :DWORD
+	.model flat, stdcall
+	includelib libucrt.lib
+	includelib kernel32.lib
+	includelib ../Debug/MAA2024-L.lib
+	ExitProcess PROTO : DWORD
 
-EXTRN ruslang: proc
-EXTRN writeInt: proc
-EXTRN showInt: proc
-EXTRN today: proc
-EXTRN showtime: proc
+	EXTRN ruslang: proc
+	EXTRN today: proc
+	EXTRN showInt: proc
+	EXTRN showString: proc
+	EXTRN writeInt: proc
 
 .stack 4096
-
+;=================== сегмент констант =========================
 .const
-	NewVar2 BYTE 2
-	NewVar2 BYTE 2
-	NewVar3 BYTE 3
-	NewVar3 BYTE 3
-	NewVar0 BYTE 0
+	lit2 BYTE 2
+	lit2 BYTE 2
+	lit3 BYTE 3
+	lit3 BYTE 3
+	lit0 BYTE 0
+;=================== сегмент данных ============================
 
 .data
 	buffer BYTE 256 dup(0)
-	kazan BYTE 0
+;=================== сегмент кода ==============================
 
 .code
 
-fi PROC , x : BYTE
-	pop ebx 
-	pop eax 
-	mov cl, bl
-	shr eax, cl
+x : BYTE, 
+	pop eax
+	pop ebx
+	shl eax, ebx
 	push eax
-	push 2
+	push fi
 	jmp local0
-	push 	jmp local0
 local0:
 	pop eax
 	ret
-fi ENDP
+ ENDP
 
 main PROC
+call rusL
 	pop fi
-	push 		jmp theend
+	push 2
+	push 2
+	call fi
 	pop fi
-	push 		jmp theend
+	push 2
+	push 2
+	call fi
 	pop fi
-	push 		jmp theend
-	push 0
+	push 2
+	push 2
+	call fi
+	push fi
 		jmp theend
 theend:
 	call ExitProcess
 main ENDP
 end main
+;=============================================================
