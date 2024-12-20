@@ -251,8 +251,8 @@ namespace Gen {
 
 			case LEX_LEFTHESIS:
 				if (flag_cycle) {
-
-					out << "\tmov ebx, " << idT.table[lexT.table[i + 1].idxTI].id << "\n";//я лох помогите
+					out << "mov cl, " << idT.table[lexT.table[i + 1].idxTI].id;
+					out << "\nmovzx ecx, cl\n";
 					out << "cycle" << num_of_cycles << ":\n";
 					out << "\tmov buffecx, ecx\n";
 

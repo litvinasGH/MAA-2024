@@ -23,8 +23,11 @@ EXTRN showInt: proc
 	L7 BYTE 1
 	L8 BYTE 3
 	L9 BYTE 3
-	L10 BYTE 1
-	L11 BYTE 0
+	L10 BYTE 4
+	L11 BYTE 2
+	L12 BYTE 3
+	L13 BYTE 1
+	L14 BYTE 0
 
 .data
 	buffer BYTE 256 dup(0)
@@ -47,7 +50,7 @@ fi PROC x : BYTE, y : BYTE
 	push eax
 	pop ax
 	mov L0, al
-	mov al, x
+	mov al, func
 	push ax
 	jmp local0
 local0:
@@ -96,22 +99,23 @@ main PROC
 	mov L7, al
 	pop ax
 	mov xm, al
-	mov al, 3
+	mov al, L9
 	push ax
 	pop ax
-	mov 3, al
+	mov L9, al
 	call today
 	push eax
-	mov al, 2
+	mov al, L11
 	push ax
 	call showInt
 	push eax
-	mov ebx, 2
+mov cl, L11
+movzx ecx, cl
 cycle0:
 	mov buffecx, ecx
-	mov al, L9
+	mov al, L12
 	push ax
-	mov al, L10
+	mov al, L13
 	push ax
 	pop ebx 
 	pop eax 
@@ -119,10 +123,10 @@ cycle0:
 	shl eax, cl
 	push eax
 	pop ax
-	mov L9, al
+	mov L12, al
 	mov ecx, buffecx
 loop cycle0
-	mov al, L11
+	mov al, L14
 	push ax
 		jmp theend
 theend:

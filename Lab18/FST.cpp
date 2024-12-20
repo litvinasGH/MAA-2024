@@ -173,7 +173,6 @@ namespace FST
 	{
 		
 		stack<char*>viewment;
-		stack<char*>temp1;
 
 
 		viewment.push((char*)"global");
@@ -203,7 +202,7 @@ namespace FST
 					LT::Add(lextable, { word[j], line, NULL});
 					
 					flag = true;
-					if (StringLine == "(")
+					if (StringLine == "(" && lextable.table[lextable.size-4].lexema == 'f')
 						flagParm = true;
 					else if (StringLine == ")")
 						flagParm = false;

@@ -1,51 +1,49 @@
-﻿Сборка начата 21.12.2024 02:22:44.
-Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\Documents\MAA-2024\ASM\ASM.vcxproj" в узле 2 (целевые объекты Build).
-     1>PrepareForBuild:
-         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-       InitializeBuildStatus:
+﻿Сборка начата 21.12.2024 2:53:51.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\MAA-2024\ASM\ASM.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
          Обращение к "Debug\ASM.tlog\unsuccessfulbuild".
        _MASM:
          Assembling ..\Debug\in.txt.asm...
-         cmd.exe /C "C:\Users\user\AppData\Local\Temp\tmp47253bb2c9b745b7974d8aaa2d37ff7c.cmd"
+         cmd.exe /C "C:\Users\artur\AppData\Local\Temp\tmp0438001f2c714e678dbdaebd43e69662.cmd"
          ml.exe /c /nologo /Zi /Fo"Debug\in.txt.obj" /Fl"Debug\\" /W3 /errorReport:prompt  /Ta..\Debug\in.txt.asm
-     1>..\Debug\in.txt.asm(49): warning A4000: cannot modify READONLY segment
-     1>..\Debug\in.txt.asm(69): warning A4000: cannot modify READONLY segment
-     1>..\Debug\in.txt.asm(83): warning A4000: cannot modify READONLY segment
-     1>..\Debug\in.txt.asm(94): warning A4000: cannot modify READONLY segment
-     1>..\Debug\in.txt.asm(96): warning A4000: cannot modify READONLY segment
-     1>..\Debug\in.txt.asm(102): error A2001: immediate operand not allowed
-     1>..\Debug\in.txt.asm(122): warning A4000: cannot modify READONLY segment
-     1>..\Debug\in.txt.asm(50): error A2070: invalid instruction operands
-     1>..\Debug\in.txt.asm(56): warning A6004: procedure argument or local not referenced : x
-     1>..\Debug\in.txt.asm(56): warning A6004: procedure argument or local not referenced : y
-     1>..\Debug\in.txt.asm(76): warning A6004: procedure argument or local not referenced : x
-     1>..\Debug\in.txt.asm(76): warning A6004: procedure argument or local not referenced : ko
+     1>..\Debug\in.txt.asm(52): warning A4000: cannot modify READONLY segment
+     1>..\Debug\in.txt.asm(72): warning A4000: cannot modify READONLY segment
+     1>..\Debug\in.txt.asm(86): warning A4000: cannot modify READONLY segment
+     1>..\Debug\in.txt.asm(97): warning A4000: cannot modify READONLY segment
+     1>..\Debug\in.txt.asm(99): warning A4000: cannot modify READONLY segment
+     1>..\Debug\in.txt.asm(105): warning A4000: cannot modify READONLY segment
+     1>..\Debug\in.txt.asm(126): warning A4000: cannot modify READONLY segment
+     1>..\Debug\in.txt.asm(53): error A2070: invalid instruction operands
+     1>..\Debug\in.txt.asm(59): warning A6004: procedure argument or local not referenced : x
+     1>..\Debug\in.txt.asm(59): warning A6004: procedure argument or local not referenced : y
+     1>..\Debug\in.txt.asm(79): warning A6004: procedure argument or local not referenced : x
+     1>..\Debug\in.txt.asm(79): warning A6004: procedure argument or local not referenced : ko
      1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml.exe /c /nologo /Zi /Fo"Debug\in.txt.obj" /Fl"Debug\\" /W3 /errorReport:prompt  /Ta..\Debug\in.txt.asm" с кодом "1".
-     1>Сборка проекта "C:\Users\user\Documents\MAA-2024\ASM\ASM.vcxproj" завершена (целевые объекты Build) с ошибкой.
+     1>Сборка проекта "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\MAA-2024\ASM\ASM.vcxproj" завершена (целевые объекты Build) с ошибкой.
 
 Ошибка сборки.
 
-       "C:\Users\user\Documents\MAA-2024\ASM\ASM.vcxproj" (целевой объект Build ) (1) ->
+       "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\MAA-2024\ASM\ASM.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект _MASM) -> 
-         ..\Debug\in.txt.asm(49): warning A4000: cannot modify READONLY segment
-         ..\Debug\in.txt.asm(69): warning A4000: cannot modify READONLY segment
-         ..\Debug\in.txt.asm(83): warning A4000: cannot modify READONLY segment
-         ..\Debug\in.txt.asm(94): warning A4000: cannot modify READONLY segment
-         ..\Debug\in.txt.asm(96): warning A4000: cannot modify READONLY segment
-         ..\Debug\in.txt.asm(122): warning A4000: cannot modify READONLY segment
-         ..\Debug\in.txt.asm(56): warning A6004: procedure argument or local not referenced : x
-         ..\Debug\in.txt.asm(56): warning A6004: procedure argument or local not referenced : y
-         ..\Debug\in.txt.asm(76): warning A6004: procedure argument or local not referenced : x
-         ..\Debug\in.txt.asm(76): warning A6004: procedure argument or local not referenced : ko
+         ..\Debug\in.txt.asm(52): warning A4000: cannot modify READONLY segment
+         ..\Debug\in.txt.asm(72): warning A4000: cannot modify READONLY segment
+         ..\Debug\in.txt.asm(86): warning A4000: cannot modify READONLY segment
+         ..\Debug\in.txt.asm(97): warning A4000: cannot modify READONLY segment
+         ..\Debug\in.txt.asm(99): warning A4000: cannot modify READONLY segment
+         ..\Debug\in.txt.asm(105): warning A4000: cannot modify READONLY segment
+         ..\Debug\in.txt.asm(126): warning A4000: cannot modify READONLY segment
+         ..\Debug\in.txt.asm(59): warning A6004: procedure argument or local not referenced : x
+         ..\Debug\in.txt.asm(59): warning A6004: procedure argument or local not referenced : y
+         ..\Debug\in.txt.asm(79): warning A6004: procedure argument or local not referenced : x
+         ..\Debug\in.txt.asm(79): warning A6004: procedure argument or local not referenced : ko
 
 
-       "C:\Users\user\Documents\MAA-2024\ASM\ASM.vcxproj" (целевой объект Build ) (1) ->
+       "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\MAA-2024\ASM\ASM.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект _MASM) -> 
-         ..\Debug\in.txt.asm(102): error A2001: immediate operand not allowed
-         ..\Debug\in.txt.asm(50): error A2070: invalid instruction operands
+         ..\Debug\in.txt.asm(53): error A2070: invalid instruction operands
          C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml.exe /c /nologo /Zi /Fo"Debug\in.txt.obj" /Fl"Debug\\" /W3 /errorReport:prompt  /Ta..\Debug\in.txt.asm" с кодом "1".
 
-    Предупреждений: 10
-    Ошибок: 3
+    Предупреждений: 11
+    Ошибок: 2
 
-Прошло времени 00:00:00.25
+Прошло времени 00:00:00.22

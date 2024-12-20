@@ -100,6 +100,7 @@ int _tmain(int argc, _TCHAR* argv[])
                 newtable.table[i].id = name;
             }
         }
+
         Gen::Generator Generate(newlex, newtable, parm.out);
         In::Delete(in);
         Out::Close(out);
