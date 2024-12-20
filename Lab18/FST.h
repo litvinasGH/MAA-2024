@@ -49,5 +49,5 @@ namespace FST
 	bool execute(
 		FST& fst
 	);
-	void CheckL(In::IN file, LexTable& lextable, IdTable& table);
+	void CheckL(In::IN file, LT::LexTable& lextable, IT::IdTable& table);
 }

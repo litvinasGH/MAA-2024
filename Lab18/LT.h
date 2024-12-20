@@ -31,6 +31,7 @@
 #define LEX_SHIFT_RIGHT '>'
 #define LEX_EQUAL '='
 #define LEX_OPERATOR 'h'
+#define LEX_LIBFUNC 'L'
 
 namespace LT
 {
@@ -41,6 +42,8 @@ namespace LT
 		int sn;	//номер строки в исхоном тексте
 		int idxTI;
 		char* value = (char*)""; //значение лексемы
+		int priority;
+		char op;
 	};
 	struct LexTable
 	{

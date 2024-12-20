@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include "stdafx.h"
 #include <cstring>
+#include <stack>
 #define _CRT_SECURE_NO_WARNINGS
 using namespace LT;
 using namespace IT;
@@ -70,7 +71,27 @@ namespace FST
 		}
 	}
 
-
+	int parseInteger(char* str)
+	{
+		// Проверяем, начинается ли строка с "0x", "0b" или "0"
+		if (str[1] != '\0' && str[0] == '0') {
+			if (str[1] == 'x' || str[1] == 'X') {
+				// Шестнадцатеричное число
+				return std::stoi(str + 2, (size_t*)nullptr, 16);
+			}
+			else if (str[1] == 'b' || str[1] == 'B') {
+				if(str[3] > '1')
+					throw ERROR_THROW(122);
+				return std::stoi(str + 2, (size_t*)nullptr, 2);
+			}
+			else {
+				// Восьмеричное число
+				return std::stoi(str, (size_t*)nullptr, 8);
+			}
+		}
+		// Десятичное число
+		return std::stoi(str);
+	}
 	void findBad(bool typeD, LT::LexTable lextable, IT::IdTable idtable)
 	{
 		
@@ -94,15 +115,12 @@ namespace FST
 		{
 			if (i >= 2 && lextable.table[i - 2].lexema == 'f' && lextable.table[i - 1].lexema == 't')
 			{
-
-
-
 				temp = idtable.table[lextable.table[i].idxTI];
 			}
 			else if (lextable.table[i - 1].lexema == 'r')
 			{
 				
-				if ((checking.iddatatype == IT::INT && temp.iddatatype == IT::INT) && ((checking.iddatatype == IT::BOOL && temp.iddatatype == IT::BOOL)))
+				if ((checking.iddatatype != IT::INT && temp.iddatatype == IT::INT) || ((checking.iddatatype != IT::BOOL && temp.iddatatype == IT::BOOL)))
 					throw ERROR_THROW(700);
 			}
 		}
@@ -154,7 +172,11 @@ namespace FST
 	void CheckL(In::IN file, LexTable &lextable, IdTable& table)
 	{
 		
+		stack<char*>viewment;
+		stack<char*>temp1;
 
+
+		viewment.push((char*)"global");
 		string word = ";,{}()=";
 		bool boolean = false;
 		bool funcF = false;
@@ -185,6 +207,10 @@ namespace FST
 						flagParm = true;
 					else if (StringLine == ")")
 						flagParm = false;
+					else if (StringLine == "=")
+					{
+						equals = true;
+					}
 					break;
 				}
 				
@@ -202,21 +228,18 @@ namespace FST
 			}
 			if (StringLine == ">>")
 			{
-				LT::Add(lextable, { 'h', line, NULL, (char*)'>'});
+				LT::Add(lextable, { '>', line, NULL, cstr, 2, '>' });
 				flag = true;
 				continue;
 			}
 			else if (StringLine == "<<")
 			{
-				LT::Add(lextable, { 'h', line, NULL, (char*)'<'});
+				LT::Add(lextable, { '<', line, NULL, cstr, 2, '<'});
 				flag = true;
 				continue;
 			}
 			
-			if (StringLine == "=")
-			{
-				equals = true;
-			}
+			
 
 			
 
@@ -245,6 +268,8 @@ namespace FST
 
 			if (execute(uint) || execute(boo))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, {'t', line, NULL, cstr });
 				if (StringLine == "bool")
 					boolean = true;
@@ -271,10 +296,101 @@ namespace FST
 				NODE()
 			);
 
+			FST writeInt
+			(
+				(char*)cstr,
+				9,
+				NODE(1, RELATION('w', 1)),
+				NODE(1, RELATION('r', 2)),
+				NODE(1, RELATION('i', 3)),
+				NODE(1, RELATION('t', 4)),
+				NODE(1, RELATION('e', 5)),
+				NODE(1, RELATION('I', 6)),
+				NODE(1, RELATION('n', 7)),
+				NODE(1, RELATION('t', 8)),
+				NODE()
+			);
+
+			FST today
+			(
+				(char*)cstr,
+				6,
+				NODE(1, RELATION('t', 1)),
+				NODE(1, RELATION('o', 2)),
+				NODE(1, RELATION('d', 3)),
+				NODE(1, RELATION('a', 4)),
+				NODE(1, RELATION('y', 5)),
+				NODE()
+			);
+
+			FST showtime
+			(
+				(char*)cstr,
+				9,
+				NODE(1, RELATION('s', 1)),
+				NODE(1, RELATION('h', 2)),
+				NODE(1, RELATION('o', 3)),
+				NODE(1, RELATION('w', 4)),
+				NODE(1, RELATION('t', 5)),
+				NODE(1, RELATION('i', 6)),
+				NODE(1, RELATION('m', 7)),
+				NODE(1, RELATION('e', 8)),
+				NODE()
+			);
+
+			FST ruslang
+			(
+				(char*)cstr,
+				8,
+				NODE(1, RELATION('r', 1)),
+				NODE(1, RELATION('u', 2)),
+				NODE(1, RELATION('s', 3)),
+				NODE(1, RELATION('l', 4)),
+				NODE(1, RELATION('a', 5)),
+				NODE(1, RELATION('n', 6)),
+				NODE(1, RELATION('g', 7)),
+				NODE()
+			);
+
+			FST showInt
+			(
+				(char*)cstr,
+				8,
+				NODE(1, RELATION('s', 1)),
+				NODE(1, RELATION('h', 2)),
+				NODE(1, RELATION('o', 3)),
+				NODE(1, RELATION('w', 4)),
+				NODE(1, RELATION('I', 5)),
+				NODE(1, RELATION('n', 6)),
+				NODE(1, RELATION('t', 7)),
+				NODE()
+			);
+
 			if (execute(func))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'f', line, NULL, cstr });
 				funcF = true;
+				continue;
+			}
+
+			if (execute(showtime) || execute(today) || execute(writeInt) || execute(ruslang) || execute(showInt))
+			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
+				LT::Add(lextable, { 'L', line, table.size, cstr });
+				IT::Entry tempEntry;
+				tempEntry.view = viewment;
+				tempEntry.idxfirstLE = lextable.size - 1;
+				tempEntry.id = cstr;
+				tempEntry.vstr.str = cstr;
+				tempEntry.vstr.len = StringLine.length();
+				tempEntry.iddatatype = IT::STR;
+				tempEntry.idtype = IT::F;
+				tempEntry.view = viewment;
+				tempEntry.flag = true;
+				IT::Add(table, tempEntry);
 				continue;
 			}
 
@@ -291,8 +407,11 @@ namespace FST
 
 			if (execute(mainone))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'm', line, NULL, cstr });
-
+				viewment.pop();
+				viewment.push((char*)"main");
 				continue;
 			}
 
@@ -310,6 +429,8 @@ namespace FST
 			);
 			if (execute(ret))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'r', line, NULL, cstr });
 				continue;
 			}
@@ -330,6 +451,8 @@ namespace FST
 
 			if (execute(connect))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'j', line, NULL, cstr });
 				continue;
 			}
@@ -348,6 +471,8 @@ namespace FST
 
 			if (execute(write))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'w', line, NULL, cstr });
 
 				continue;
@@ -367,6 +492,8 @@ namespace FST
 			);
 			if (execute(print))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'p', line, NULL, cstr });
 
 				continue;
@@ -388,6 +515,8 @@ namespace FST
 
 			if (execute(cycle))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'c', line, NULL, cstr });
 				continue;
 			}
@@ -416,11 +545,11 @@ namespace FST
 
 			if (execute(truth) || execute(lie))
 			{
-				
-			
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'q', line, table.size, cstr });
 				IT::Entry tempEntry;
-
+				tempEntry.flag = true;
 				tempEntry.idxfirstLE = lextable.size - 1;
 				if (StringLine == "false")
 				{
@@ -440,6 +569,7 @@ namespace FST
 				{
 					compare(tempEntry, table.table[table.size - 1]);
 					equals = false;
+					table.table[table.size - 1].flag = true;
 				}
 				IT::Add(table, tempEntry);
 				
@@ -462,6 +592,8 @@ namespace FST
 
 			if (execute(lib))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'y', line, NULL, cstr});
 				continue;
 			}
@@ -543,10 +675,14 @@ namespace FST
 			
 			if (execute(strLit))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'l', line, table.size, cstr });
 				IT::Entry tempEntry;
+				tempEntry.flag = true;
 				tempEntry.idxfirstLE = lextable.size-1;
 				tempEntry.vstr.str = (char*)cstr;
+				tempEntry.view = viewment;
 				tempEntry.id = cstr;
 				tempEntry.vstr.len = StringLine.length();
 				tempEntry.iddatatype = IDDATATYPE::STR;
@@ -557,40 +693,79 @@ namespace FST
 				{
 					compare(tempEntry, table.table[table.size - 1]);
 					equals = false;
+					table.table[table.size - 1].flag = true;
 				}
 				IT::Add(table, tempEntry);
 				repeat = false;
 				continue;
 			}
 
-			FST intLit
-			(
+			FST intLit(
 				(char*)cstr,
-				2,
-				NODE(
-					20,
-					RELATION('0', 0), RELATION('0', 1),
-					RELATION('1', 0), RELATION('1', 1),
-					RELATION('2', 0), RELATION('2', 1),
-					RELATION('3', 0), RELATION('3', 1),
-					RELATION('4', 0), RELATION('4', 1),
-					RELATION('5', 0), RELATION('5', 1),
-					RELATION('6', 0), RELATION('6', 1),
-					RELATION('7', 0), RELATION('7', 1),
-					RELATION('8', 0), RELATION('8', 1),
-					RELATION('9', 0), RELATION('9', 1)
+				7,
+				NODE(20,
+					RELATION('0', 1), RELATION('0', 6), 
+					RELATION('1', 5), RELATION('2', 5), RELATION('3', 5), RELATION('4', 5),
+					RELATION('5', 5), RELATION('6', 5), RELATION('7', 5), RELATION('8', 5), RELATION('9', 5),
+					RELATION('1', 6), RELATION('2', 6), RELATION('3', 6), RELATION('4', 6),
+					RELATION('5', 6), RELATION('6', 6), RELATION('7', 6), RELATION('8', 6), RELATION('9', 6)
 				),
+	
+				NODE(13,
+					RELATION('x', 3), RELATION('X', 3), 
+					RELATION('b', 4), RELATION('B', 4),
+					RELATION('0', 1), RELATION('0', 2), RELATION('1', 2), RELATION('2', 2), RELATION('3', 2), RELATION('4', 2),
+					RELATION('5', 2), RELATION('6', 2), RELATION('7', 2) 
+				),
+				NODE(16,
+					RELATION('0', 2), RELATION('1', 2), RELATION('2', 2), RELATION('3', 2), RELATION('4', 2),
+					RELATION('5', 2), RELATION('6', 2), RELATION('7', 2),
+					RELATION('0', 6), RELATION('1', 6), RELATION('2', 6), RELATION('3', 6), RELATION('4', 6),
+					RELATION('5', 6), RELATION('6', 6), RELATION('7', 6) 
+				),
+
+				NODE(44,
+					
+					RELATION('0', 3), RELATION('1', 3), RELATION('2', 3), RELATION('3', 3), RELATION('4', 3), RELATION('5', 3),
+					RELATION('6', 3), RELATION('7', 3), RELATION('8', 3), RELATION('9', 3),
+					RELATION('a', 3), RELATION('b', 3), RELATION('c', 3), RELATION('d', 3),
+					RELATION('e', 3), RELATION('f', 3), RELATION('A', 3), RELATION('B', 3),
+					RELATION('C', 3), RELATION('D', 3), RELATION('E', 3), RELATION('F', 3),
+
+					RELATION('0', 6), RELATION('1', 6), RELATION('2', 6), RELATION('3', 6), RELATION('4', 6), RELATION('5', 6),
+					RELATION('6', 6), RELATION('7', 6), RELATION('8', 6), RELATION('9', 6),
+					RELATION('a', 6), RELATION('b', 6), RELATION('c', 6), RELATION('d', 6),
+					RELATION('e', 6), RELATION('f', 6), RELATION('A', 6), RELATION('B', 6),
+					RELATION('C', 6), RELATION('D', 6), RELATION('E', 6), RELATION('F', 6)
+				),
+				NODE(4,
+					RELATION('0', 4), RELATION('1', 4),
+					RELATION('0', 6), RELATION('1', 6)
+				),
+				NODE(20,
+					RELATION('0', 5), RELATION('1', 5), RELATION('2', 5), RELATION('3', 5), RELATION('4', 5),
+					RELATION('5', 5), RELATION('6', 5), RELATION('7', 5), RELATION('8', 5), RELATION('9', 5),
+					RELATION('0', 6), RELATION('1', 6), RELATION('2', 6), RELATION('3', 6), RELATION('4', 6),
+					RELATION('5', 6), RELATION('6', 6), RELATION('7', 6), RELATION('8', 6), RELATION('9', 6)
+				),
+
 				NODE()
 			);
 
+			
+
 			if (execute(intLit))
 			{
+				if (typeD == true)
+					throw ERROR_THROW(98);
 				LT::Add(lextable, { 'n', line, table.size, cstr });
 				IT::Entry tempEntry;
 				if (atoi(cstr) > 255 || atoi(cstr) < 0)
 					throw ERROR_THROW(90);
 				tempEntry.idxfirstLE = lextable.size-1;
-				tempEntry.vint = atoi(cstr);
+				tempEntry.flag = true;
+				tempEntry.view = viewment;
+				tempEntry.vint = parseInteger(cstr);
 				tempEntry.id = cstr;
 				tempEntry.iddatatype = IDDATATYPE::INT;
 				if (flagParm == true)
@@ -600,6 +775,7 @@ namespace FST
 				{
 					compare(tempEntry, table.table[table.size - 1]);
 					equals = false;
+					table.table[table.size - 1].flag = true;
 				}
 				IT::Add(table, tempEntry);
 				
@@ -738,6 +914,7 @@ namespace FST
 					throw ERROR_THROW(92);
 				LT::Add(lextable, { 'i', line, table.size, cstr });
 				IT::Entry tempEntry;
+				tempEntry.view = viewment;
 				tempEntry.idxfirstLE = lextable.size-1;
 				tempEntry.id = cstr;
 				tempEntry.vstr.str = cstr;
@@ -751,52 +928,91 @@ namespace FST
 				if (funcF == true || (funcF == true && typeD == true))
 				{
 					tempEntry.idtype = IDTYPE::F;
-					funcF = false;
+					tempEntry.flag = true;
+					viewment.push(cstr);
 				}
 				else if (flagParm == true)
-					tempEntry.idtype = IDTYPE::P;
-
-				else tempEntry.idtype = IDTYPE::V;
-				bool absence = false;
-				for (int i = 0; i < table.size; i++)
 				{
-					if (tempEntry.idtype == IT::F && tempEntry.idtype == table.table[i].idtype)
-					{
-						tempEntry = table.table[i];
-					}
+					tempEntry.idtype = IDTYPE::P;
+					tempEntry.flag = true;
+				}
 
-					if (!strcmp(tempEntry.id, table.table[i].id) && typeD == false)
+				else 
+					tempEntry.idtype = IDTYPE::V;
+				bool absence = false;
+				bool field_of = false;
+				for (int j = 0; j < table.size; j++)
+				{
+					if (strcmp(table.table[j].id, "today") == false)
+						continue;
+					
+					if ((tempEntry.idtype == IT::V || tempEntry.idtype == IT::P || tempEntry.idtype == IT::F) && (strcmp(tempEntry.id, table.table[j].id) == false) &&  typeD == false 
+						&& (strcmp(tempEntry.view.top(), table.table[j].view.top()) == false || table.table[j].view.size()==1))
 					{
 						absence = true;
+						tempEntry.flag = true;
+						table.table[j].flag = true;
 					}
-					if (!strcmp(tempEntry.id, table.table[i].id) && typeD == true)
+					
+					if (!strcmp(tempEntry.id, table.table[j].id) && typeD == true && (strcmp(tempEntry.view.top(), table.table[j].view.top()) == false) && tempEntry.idtype == IT::F)
+					{
+						throw ERROR_THROW(94);
+					}
+					else if (!strcmp(tempEntry.id, table.table[j].id) && typeD == true && (strcmp(tempEntry.view.top(), table.table[j].view.top()) == false))
 					{
 						throw ERROR_THROW(699);
 					}
-					else if (absence == false && typeD == false && i == table.size - 1)
-					{
-						throw ERROR_THROW(707);
-					}
 					
+				}
+
+
+				for (int j = 0; j < table.size; j++)
+				{
+				if (absence == false && typeD == false && j == table.size - 1 && strcmp(table.table[j].id, "today") == true)
+				{
+					throw ERROR_THROW(707);
+				}
+				}
+
+				if (field_of == true)
+				{
+					throw ERROR_THROW(707);
 				}
 				if (equals == true)
 				{
 					compare(tempEntry, table.table[table.size - 1]);
 					equals = false;
+					tempEntry.flag = true;
+					table.table[table.size - 1].flag = true;
 				}
+				
+				if (absence == false && (funcF == true || (funcF == true && typeD == true)))
+				{
 
-				if(absence == false)
-				IT::Add(table, tempEntry);
+					IT::Add(table, tempEntry);
+				}
+				else if (absence == false)
+				{
+					IT::Add(table, tempEntry);
+				}
 				if (lextable.table[lextable.size - 2].lexema == 'r')
+				{
 					typeFind(lextable, table, tempEntry);
-
+					viewment.pop();
+				}
+				if (lextable.table[lextable.size - 2].lexema == 'c' && tempEntry.iddatatype != IT::INT)
+				{
+					throw ERROR_THROW(125);
+				}
 				typeD = false;
 				repeat = false;
+				funcF = false;
 				continue;
 			}
 
 		}
 		bool main_presence = false;
+
 		for (int i = 0; i < lextable.size; i++)
 		{
 			if (lextable.table[i].lexema == 'm' && main_presence == false)
@@ -806,6 +1022,15 @@ namespace FST
 		}
 		if (main_presence == false)
 			throw ERROR_THROW(97);
+
+		for(int i = 0; i < table.size; i++)
+		{
+			IT::Entry lexEntry = table.table[i];
+			if (lexEntry.flag == false)
+				throw ERROR_THROW(120);
+
+		}
 	}
+
 
 }

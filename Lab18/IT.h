@@ -1,4 +1,5 @@
 #pragma once
+#include <stack>
 #define ID_MAXSIZE 6
 #define TI_MAXSIZE 4096
 #define TI_INT_DEFAULT 0x00000000
@@ -13,6 +14,7 @@ namespace IT
 
 	struct Entry
 	{
+		std::stack<char*>view;
 
 		int			idxfirstLE;
 		char* id;
@@ -25,6 +27,7 @@ namespace IT
 				char* str;
 			}	vstr;
 			bool vbool;
+			bool flag = false;
 
 	};
 

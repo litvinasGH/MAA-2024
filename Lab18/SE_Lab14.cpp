@@ -8,7 +8,8 @@
 #include "Log.h"
 #include "In.h"
 #include "GEN.h"
-
+#include "Polish.h"
+#include <ctime>
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -56,9 +57,11 @@ int _tmain(int argc, _TCHAR* argv[])
         mfst.start(log);
         mfst.savededucation();
         mfst.printrules(log);
+        Polish::startPolish(newlex, idtable);
         Gen::Generator Generate(newlex, idtable, parm.out);
         In::Delete(in);
         Out::Close(out);
+        return 0;
     }
     catch (Error::ERROR e)
     {

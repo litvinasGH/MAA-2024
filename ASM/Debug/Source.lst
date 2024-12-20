@@ -1,0 +1,165 @@
+Microsoft (R) Macro Assembler Version 14.37.32822.0	    12/20/24 05:50:22
+Source.asm						     Page 1 - 1
+
+
+				.586P
+				.model flat, stdcall
+				includelib libucrt.lib
+				includelib kernel32.lib
+				includelib MAA2024-L.lib
+				EXTRN ruslang: proc
+				EXTRN writeInt: proc
+				EXTRN showInt: proc
+				EXTRN today: proc
+				EXTRN showtime: proc
+				ExitProcess PROTO :DWORD
+
+
+				.stack 4096
+
+ 00000000			.const
+ 00000000 01				newtrue BYTE 1
+ 00000001 02				new0x2 BYTE 2
+ 00000002 03				new0b11 BYTE 3
+ 00000003 02				new2 BYTE 2
+ 00000004 01				new1 BYTE 1
+ 00000005 03				new3 BYTE 3
+
+ 00000006 00				new0 BYTE 0
+
+ 00000000			.data
+ 00000000  00000100 [			buffer BYTE 256 dup(0)
+	    00
+	   ]
+ 00000100 00000000			buffecx DWORD ?
+ 00000104 00000003			kaz DWORD 3
+ 00000108 00000001			xio DWORD 1
+ 00000000			.code
+
+ 00000000			fi PROC x :  DWORD, y :  DWORD
+ 00000003  5B				pop ebx 
+ 00000004  58				pop eax 
+ 00000005  8A CB			mov cl, bl
+ 00000007  D3 E0			shl eax, cl
+ 00000009  50				push eax
+ 0000000A  68 00000016 R		push func
+ 0000000F  EB 00			jmp local0
+ 00000011			local0:
+ 00000011  58				pop eax
+					ret
+ 00000016			fi ENDP
+Source.asm(44) : warning A6004:procedure argument or local not referenced : x
+Source.asm(44) : warning A6004:procedure argument or local not referenced : y
+
+ 00000016			func PROC x :  DWORD, ko :  DWORD
+ 00000019  5B				pop ebx 
+ 0000001A  58				pop eax 
+ 0000001B  8A CB			mov cl, bl
+ 0000001D  D3 E8			shr eax, cl
+ 0000001F  50				push eax
+ 00000020  6A 01			push 1
+ 00000022  EB 00			jmp local1
+ 00000024			local1:
+ 00000024  58				pop eax
+					ret
+ 00000029			func ENDP
+Source.asm(57) : warning A6004:procedure argument or local not referenced : x
+Source.asm(57) : warning A6004:procedure argument or local not referenced : ko
+
+ 00000029			main PROC
+ 00000029  FF 35 00000104 R		push kaz
+ 0000002F  5B				pop ebx 
+ 00000030  58				pop eax 
+ 00000031  8A CB			mov cl, bl
+ 00000033  D3 E8			shr eax, cl
+ 00000035  50				push eax
+ 00000036  FF 35 00000108 R		push xio
+ 0000003C  6A 03			push 3
+ 0000003E  6A 03			push 3
+ 00000040  B9 00000000 E		mov ecx, writeInt
+ 00000045			cycle0:
+ 00000045  89 0D 00000100 R		mov buffecx, ecx
+ 0000004B  B9 00000000 R		mov ecx, fi
+ 00000050  89 0D 00000100 R		mov buffecx, ecx
+ 00000056  5B				pop ebx 
+ 00000057  58				pop eax 
+ 00000058  8A CB			mov cl, bl
+ 0000005A  D3 E0			shl eax, cl
+ 0000005C  50				push eax
+ 0000005D  8B 0D 00000100 R		mov ecx, buffecx
+ 00000063  E2 E0		loop cycle0
+ 00000065  6A 00			push 0
+ 00000067  EB 00				jmp theend
+ 00000069			theend:
+ 00000069  E8 00000000 E		call today
+ 0000006E  E8 00000000 E		call showtime
+ 00000073  E8 00000000 E	call ExitProcess
+ 00000078			main ENDP
+				end main
+Microsoft (R) Macro Assembler Version 14.37.32822.0	    12/20/24 05:50:22
+Source.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+CONST  . . . . . . . . . . . . .	32 Bit	 00000007 Para	  Public  'CONST'	 ReadOnly
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 0000010C Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000078 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+fi . . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000016 Public STDCALL
+  x  . . . . . . . . . . . . . .	DWord	 bp + 00000008
+  y  . . . . . . . . . . . . . .	DWord	 bp + 0000000C
+  local0 . . . . . . . . . . . .	L Near	 00000011 _TEXT	
+func . . . . . . . . . . . . . .	P Near	 00000016 _TEXT	Length= 00000013 Public STDCALL
+  x  . . . . . . . . . . . . . .	DWord	 bp + 00000008
+  ko . . . . . . . . . . . . . .	DWord	 bp + 0000000C
+  local1 . . . . . . . . . . . .	L Near	 00000024 _TEXT	
+main . . . . . . . . . . . . . .	P Near	 00000029 _TEXT	Length= 0000004F Public STDCALL
+  cycle0 . . . . . . . . . . . .	L Near	 00000045 _TEXT	
+  theend . . . . . . . . . . . .	L Near	 00000069 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+buffecx  . . . . . . . . . . . .	DWord	 00000100 _DATA	
+buffer . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+kaz  . . . . . . . . . . . . . .	DWord	 00000104 _DATA	
+new0b11  . . . . . . . . . . . .	Byte	 00000002 CONST	
+new0x2 . . . . . . . . . . . . .	Byte	 00000001 CONST	
+new0 . . . . . . . . . . . . . .	Byte	 00000006 CONST	
+new1 . . . . . . . . . . . . . .	Byte	 00000004 CONST	
+new2 . . . . . . . . . . . . . .	Byte	 00000003 CONST	
+new3 . . . . . . . . . . . . . .	Byte	 00000005 CONST	
+newtrue  . . . . . . . . . . . .	Byte	 00000000 CONST	
+ruslang  . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+showInt  . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+showtime . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+today  . . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+writeInt . . . . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+xio  . . . . . . . . . . . . . .	DWord	 00000108 _DATA	
+
+	   4 Warnings
+	   0 Errors

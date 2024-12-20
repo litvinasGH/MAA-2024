@@ -19,3 +19,4 @@
 #include "GRB.h"
 #include "MFST.h"
 #include "GEN.h"
+#include <stack>

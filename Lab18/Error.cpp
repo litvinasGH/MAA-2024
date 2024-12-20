@@ -66,10 +66,10 @@ namespace Error
 		ERROR_ENTRY(120, "[LT]: Ошибка при разборе токена"), // +
 		ERROR_ENTRY(121, "[LT]: Используется необъявленный идентификатор"), // +
 		ERROR_ENTRY(122, "[LT]: Идентификатор не имеет типа"),
-		ERROR_ENTRY_NODEF(123),
+		ERROR_ENTRY(123, "[LT]: Неопознанная лексема"),
 		ERROR_ENTRY(124, "[LT]: Отсутствует точка входа"), // +
 		ERROR_ENTRY(125, "[LT]: Обнаружена вторая точка входа"),
-		ERROR_ENTRY_NODEF(126),
+		ERROR_ENTRY(126,"[LT]: Неверный параметр цикла"),
 		ERROR_ENTRY_NODEF(127),
 		ERROR_ENTRY_NODEF(128),
 		ERROR_ENTRY_NODEF(129),
@@ -102,7 +102,7 @@ namespace Error
 		ERROR_ENTRY(605, "[Синтаксис]: Ошибка знака в выражении"),
 		ERROR_ENTRY(606, "[Синтаксис]: Ошибка синтаксического анализа"),
 		ERROR_ENTRY_NODEF(607),
-		ERROR_ENTRY(608, "[Синтаксис]: Обнаружена синтаксическая ошибка (смотри журнал Log)"),
+		ERROR_ENTRY(608, "[Синтаксис]: Неверная запись"),
 		ERROR_ENTRY_NODEF(609),
 		ERROR_ENTRY_NODEF10(610),
 		ERROR_ENTRY_NODEF10(620),
