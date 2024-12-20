@@ -435,27 +435,7 @@ namespace FST
 				continue;
 			}
 
-			FST connect
-			(
-				(char*)cstr,
-				8,
-				NODE(1, RELATION('c', 1)),
-				NODE(1, RELATION('o', 2)),
-				NODE(1, RELATION('n', 3)),
-				NODE(1, RELATION('n', 4)),
-				NODE(1, RELATION('e', 5)),
-				NODE(1, RELATION('c', 6)),
-				NODE(1, RELATION('t', 7)),
-				NODE()
-			);
-
-			if (execute(connect))
-			{
-				if (typeD == true)
-					throw ERROR_THROW(98);
-				LT::Add(lextable, { 'j', line, NULL, cstr });
-				continue;
-			}
+			
 
 			FST write
 			(
@@ -578,25 +558,6 @@ namespace FST
 			
 			}
 
-
-			FST lib(
-				(char*)cstr,
-				6,
-				NODE(1, RELATION('c', 1)),
-				NODE(1, RELATION('t', 2)),
-				NODE(1, RELATION('i', 3)),
-				NODE(1, RELATION('m', 4)),
-				NODE(1, RELATION('e', 5)),
-				NODE()
-				);
-
-			if (execute(lib))
-			{
-				if (typeD == true)
-					throw ERROR_THROW(98);
-				LT::Add(lextable, { 'y', line, NULL, cstr});
-				continue;
-			}
 
 			FST strLit(
 				(char*)cstr,
@@ -1015,13 +976,15 @@ namespace FST
 
 		for (int i = 0; i < lextable.size; i++)
 		{
+			if(lextable.table[i-2].lexema =='c' && table.table[lextable.table[i].idxTI].iddatatype == IT::STR)
+				throw ERROR_THROW(125)
 			if (lextable.table[i].lexema == 'm' && main_presence == false)
 				main_presence = true;
 			else if (lextable.table[i].lexema == 'm' && main_presence == true)
-				throw ERROR_THROW(93);
+				throw ERROR_THROW(118);
 		}
 		if (main_presence == false)
-			throw ERROR_THROW(97);
+			throw ERROR_THROW(123);
 
 		for(int i = 0; i < table.size; i++)
 		{

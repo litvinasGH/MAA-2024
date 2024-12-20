@@ -1,0 +1,72 @@
+.586P
+.model flat, stdcall
+includelib libucrt.lib
+includelib kernel32.lib
+includelib ../Debug/MAA2024-L.lib
+ExitProcess PROTO :DWORD
+
+EXTRN strToByte: proc
+EXTRN slen: proc
+EXTRN OutputInt: proc
+EXTRN OutputStr: proc
+EXTRN OutputIntLn: proc
+EXTRN OutputStrLn: proc
+
+.stack 4096
+
+.const
+	2 DWORD 2
+	3 DWORD 3
+	true BYTE 1
+	0x2 DWORD 2
+	0b11 DWORD 3
+	2 DWORD 2
+	1 DWORD 1
+	true BYTE 1
+	3 DWORD 3
+	3 DWORD 3
+	1 DWORD 1
+	0 DWORD 0
+
+.data
+	buffer BYTE 256 dup(0)
+	buffecx DWORD ?
+
+.code
+
+fi PROC x : DWORD, y : DWORD
+	push 	jmp local0
+local0:
+	pop eax
+	ret
+fi ENDP
+
+func PROC x : DWORD, ko : DWORD
+	push -858993460
+	jmp local1
+local1:
+	pop eax
+	ret
+func ENDP
+
+main PROC
+	pop kaz
+	pop 0b11
+	pop true
+	pop x
+	push 3
+	pop 3
+	mov ecx, writeInt
+cycle0:
+	mov buffecx, ecx
+	mov ecx, fi
+cycle0:
+	mov buffecx, ecx
+	mov ecx, buffecx
+loop cycle0
+	push 0
+		jmp theend
+theend:
+call ExitProcess
+main ENDP
+end main

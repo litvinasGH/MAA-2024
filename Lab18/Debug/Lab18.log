@@ -1,35 +1,27 @@
-﻿Сборка начата 20.12.2024 6:19:34.
+﻿Сборка начата 20.12.2024 23:40:42.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" в узле 2 (целевые объекты Build).
      1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (Lab18.vcxproj).  Это может привести к ошибкам очистки и перестроения.
      1>InitializeBuildStatus:
          Создание "Debug\MAA2024.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\MAA2024.tlog\unsuccessfulbuild".
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt GEN.cpp
-         GEN.cpp
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Error.cpp FST.cpp
+         Error.cpp
+         FST.cpp
      1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
        C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
-       Link:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\MAA2024.exe" /INCREMENTAL /ILK:"Debug\MAA2024.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\MAA2024.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\MAA2024.lib" /MACHINE:X86 Debug\Error.obj
-         Debug\FST.obj
-         Debug\GEN.obj
-         Debug\GRB.obj
-         Debug\In.obj
-         Debug\IT.obj
-         Debug\Log.obj
-         Debug\LT.obj
-         Debug\MFST.obj
-         Debug\Out.obj
-         Debug\Parm.obj
-         Debug\Polish.obj
-         Debug\SE_Lab14.obj
-         Lab18.vcxproj -> C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Debug\MAA2024.exe
-       FinalizeBuildStatus:
-         Файл "Debug\MAA2024.tlog\unsuccessfulbuild" удаляется.
-         Обращение к "Debug\MAA2024.tlog\MAA2024.lastbuildstate".
-     1>Сборка проекта "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" завершена (целевые объекты Build).
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(156,23): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(187,21): warning C4018: <: несоответствие типов со знаком и без знака
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(932,108): warning C4805: ==: небезопасное смешение типа "int" и типа "bool" в операции
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(980,11): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "ERROR_THROW"
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(980,11): error C2660: Error::geterror: функция не принимает 0 аргументов
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Error.h(31,8): message : см. объявление "Error::geterror"
+       C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(980,11): message : при попытке сопоставить список аргументов "()"
+     1>C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(980,5): fatal  error C1903: не удается восстановить после предыдущих ошибок; остановка компиляции
+         Создание кода...
+     1>Сборка проекта "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" завершена (целевые объекты Build) с ошибкой.
 
-Сборка успешно завершена.
+Ошибка сборки.
 
        "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект PrepareForBuild) -> 
@@ -39,8 +31,18 @@
        "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект ClCompile) -> 
          C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\stdafx.h(2,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(156,23): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(187,21): warning C4018: <: несоответствие типов со знаком и без знака
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(932,108): warning C4805: ==: небезопасное смешение типа "int" и типа "bool" в операции
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(980,11): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "ERROR_THROW"
 
-    Предупреждений: 2
-    Ошибок: 0
 
-Прошло времени 00:00:00.85
+       "C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\Lab18.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(980,11): error C2660: Error::geterror: функция не принимает 0 аргументов
+         C:\Users\artur\OneDrive\Рабочий стол\Новая папка\KPO_3SEM\Lab18\FST.cpp(980,5): fatal  error C1903: не удается восстановить после предыдущих ошибок; остановка компиляции
+
+    Предупреждений: 6
+    Ошибок: 2
+
+Прошло времени 00:00:00.80

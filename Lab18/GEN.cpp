@@ -189,10 +189,10 @@ namespace Gen {
 			case LEX_RETURN:
 				out << "\tpush ";
 				if (idT.table[lexT.table[i + 1].idxTI].idtype == IT::L)
-					if(idT.table[lexT.table[i + 1].idxTI].iddatatype == IT::BOOL || idT.table[lexT.table[i + 1].idxTI].iddatatype == IT::INT)
-					out << idT.table[lexT.table[i + 1].idxTI].vint << "\n";
-				else
-					out << idT.table[lexT.table[i + 1].idxTI].id << "\n";
+					if (idT.table[lexT.table[i + 1].idxTI].iddatatype == IT::BOOL || idT.table[lexT.table[i + 1].idxTI].iddatatype == IT::INT)
+						out << idT.table[lexT.table[i + 1].idxTI].vint << "\n";
+					else
+						out << idT.table[lexT.table[i + 1].idxTI].id << "\n";
 				if (flag_func) {
 					out << "\tjmp local" << num_of_ret << "\n";
 					flag_ret = true;
@@ -254,19 +254,8 @@ namespace Gen {
 			case LEX_RIGHTHESIS:
 
 				break;
-
-			case LEX_LIBFUNC:
-
-				if(strcmp(idT.table[lexT.table[i].lexema].id, (char*)"writeInt") == false)
-				{
-					if (idT.table[lexT.table[i + 1].idxTI].iddatatype == IT::INT)
-						out << "\tpush " << idT.table[lexT.table[i + 1].idxTI].id << "\n\tcall writeInt\n";
-				}
-				
-				break;
-
-			
 			}
+			
 		}
 	}
 }
